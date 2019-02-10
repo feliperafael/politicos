@@ -130,7 +130,7 @@ class TSE(object):
         # FIXME
         if int(self.year) >= 2014:
             df = self._read_csv(filename)
-            df['filename'] = filename
+            df['filename'] = os.path.basename(filename)
             df.columns = df.columns.str.lower()
             return df
 
